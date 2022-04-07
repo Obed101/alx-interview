@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+This Module Prints The Pascal's Triangle
+"""
+
+
 def pascal_triangle(n):
     """ A function that prints a list of
     lists of integers in pascal way
