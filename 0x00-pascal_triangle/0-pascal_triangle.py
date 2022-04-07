@@ -9,11 +9,11 @@ def pascal_triangle(n):
     lists of integers in pascal way
     """
     triangle = []
-    row = []
+    new = []
     prev_row = []
-    for i in range(0, n + 1):
-        row = [j > 0 and j < i - 1 and i > 2 and prev_row[j-1]
+    for i in range(n + 1):
+        new = [j > 0 and j < i - 1 and i > 2 and prev_row[j-1]
                + prev_row[j] or 1 for j in range(0, i)]
-        prev_row = row
-        triangle += [row]
+        prev_row = new
+        triangle += [new]
     return triangle[1:]
