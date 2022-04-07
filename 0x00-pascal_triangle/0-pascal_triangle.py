@@ -9,7 +9,7 @@ def pascal_triangle(n):
     lists of integers in pascal way
     """
     if n <= 0:
-        return "[]"
+        return []
     for line in range(1, n + 1):
         C = 1
         for i in range(1, line + 1):
