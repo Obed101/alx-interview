@@ -1,10 +1,10 @@
-#!/usr/bin/python3be unlocked
-"""Lockboxes module. Checks if boxed can 
+#!/usr/bin/python3
+"""Lockboxes module. Checks if boxed can
 """
 
 
 def canUnlockAll(boxes):
-    """ Returns True if the key can unlock 
+    """ Returns True if the key can unlock
         all boxes, else False
     """
     if type(boxes) is not list or not all(type(box) is list for box in boxes):
