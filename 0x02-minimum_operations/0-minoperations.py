@@ -14,7 +14,7 @@ def minOperations(n: int) -> int:
     # Creating the number of operations...
     while n > 1:
         counter += 1
-        while(n % counter == 0 and n > 1):
+        while(n % counter == 0):
             n /= counter
             operation_list.append(counter)
     # Number of operations is the sum of all items in the list
