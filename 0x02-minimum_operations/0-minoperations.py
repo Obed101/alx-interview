@@ -9,13 +9,8 @@ def minOperations(n: int) -> int:
     # Validating n...
     if not n or not type(n) is not int or n <= 1:
         return 0
-    counter = 1
-    operation_list = []
+
     # Creating the number of operations...
-    while n > 1:
-        counter += 1
-        while(n % counter == 0):
-            n /= counter
-            operation_list.append(counter)
-    # Number of operations is the sum of all items in the list
-    return sum(operation_list)
+    for i in range(2, n + 1):
+        if n % i == 0:
+            return minOperations(int(n / i)) + i
