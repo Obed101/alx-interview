@@ -19,3 +19,14 @@ def minOperations(n: int) -> int:
             operation_list.append(counter)
     # Number of operations is the sum of all items in the list
     return sum(operation_list)
+
+
+## Driver code ##
+
+n = 4
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+
+n = 12
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+
+
