@@ -7,7 +7,7 @@ This file calculates minimum Operations on a letter
 def minOperations(n: int) -> int:
     """ Finds the minimum number of operations required """
     # Validating n...
-    if not n or not type(n) is not int or n <= 1:
+    if not n or type(n) is not int or n <= 1:
         return 0
     counter = 1
     operation_list = []
