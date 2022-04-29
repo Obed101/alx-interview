@@ -37,7 +37,7 @@ if __name__ == '__main__':
                 if s_code in status_codes:
                     status_codes[s_code] += 1
                 file_size += int(data[-1])
-            except:
+            except Exception:
                 pass
         stat_compute(status_codes, file_size)
     except KeyboardInterrupt:
