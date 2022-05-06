@@ -2,7 +2,6 @@
 """
 This module validates utf-8
 """
-
 from typing import List
 
 
