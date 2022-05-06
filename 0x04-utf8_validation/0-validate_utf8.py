@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module validates utf-8
+This module validates utf-8 for a data
 """
 from typing import List
 
