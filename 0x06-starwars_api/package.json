@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "global-tunnel-ng": "^2.7.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/request": "^2.48.8"
+  }
+}
