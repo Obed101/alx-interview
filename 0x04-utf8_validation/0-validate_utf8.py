@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""This module validates utf-8 for a data
+
 """
-from typing import List
+Module 0-validate_utf8
+"""
 
 
 def validUTF8(data: List[int]) -> bool:
