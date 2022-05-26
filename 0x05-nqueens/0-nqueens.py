@@ -9,7 +9,7 @@ if len(sys.argv) < 2:
 arg = sys.argv[1]
 
 if type(arg) is not int:
-    print("N must be a argber")
+    print("N must be a number")
     sys.exit(1)
 
 if not (arg >= 4):
@@ -19,7 +19,7 @@ if not (arg >= 4):
 
 def solveNQueens(n):
     """Solution for n queens"""
-    col = set() 
+    col = set()
     pos = set()
     neg = set()
 
