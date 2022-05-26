@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This program solves the N-QUEENS problem"""
 import sys
-from click import echo
 
 if len(sys.argv) < 2:
     print("Usage: nqueens N")
