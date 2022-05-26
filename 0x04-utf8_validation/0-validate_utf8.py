@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+"""
+This module validates UTF8 data
+"""
 
-"""
-Module 0-validate_utf8
-"""
 from typing import List
 
 
