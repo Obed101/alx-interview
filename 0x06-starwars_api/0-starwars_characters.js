@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const request = require('request');
 movie_id = process.argv[2];
 
