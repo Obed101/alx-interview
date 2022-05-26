@@ -21,6 +21,7 @@ if not (int(arg) >= 4):
     sys.exit(1)
 arg = int(arg)
 
+
 def solveNQueens(n):
     """Solution for n queens"""
     col = set()
