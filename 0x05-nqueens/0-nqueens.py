@@ -38,7 +38,8 @@ def setup_n_queens(n):
             return
 
         for col in range(n):
-            if col in column or (row + col) in forward or (row - col) in backward_:
+            if col in column or (row + col) in forward or (
+                    row - col) in backward_:
                 continue
 
             column.add(col)
