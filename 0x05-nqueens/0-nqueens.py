@@ -5,7 +5,7 @@ import sys
 from click import echo
 
 if len(sys.argv) < 2:
-    print("Usage: nqueens N", end='')
+    print("Usage: nqueens N")
     sys.exit(1)
 
 arg = sys.argv[1]
@@ -13,11 +13,11 @@ arg = sys.argv[1]
 try:
     int(arg)
 except ValueError:
-    print("N must be a number", end='')
+    print("N must be a number")
     sys.exit(1)
 
 if not (int(arg) >= 4):
-    print("N must be at least 4", end='')
+    print("N must be at least 4")
     sys.exit(1)
 arg = int(arg)
 
