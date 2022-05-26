@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This program solves the N-QUEENS problem"""
 import sys
+from click import echo
 
 if len(sys.argv) < 2:
     print("Usage: nqueens N")
@@ -20,44 +21,44 @@ if not (int(arg) >= 4):
 arg = int(arg)
 
 
-def solveNQueens(n):
-    """Solution for n queens"""
-    col = set()
-    pos = set()
-    neg = set()
+def setup_n_queens(n):
+    """This function sets N Queens table"""
+    column = set()
+    forward = set()
+    backward_ = set()
 
-    res = []
+    table = []
 
     board = [[] for n in range(n)]
 
     def backtrack(row):
-        """function for recursion"""
+        """Semi callback for Backtrack algorithm"""
         if row == n:
             copy = board.copy()
-            res.append(copy)
+            table.append(copy)
             return
 
-        for c in range(n):
-            if c in col or (row + c) in pos or (row - c) in neg:
+        for col in range(n):
+            if col in column or (row + col) in forward or (row - col) in backward_:
                 continue
 
-            col.add(c)
-            pos.add(row + c)
-            neg.add(row - c)
+            column.add(col)
+            forward.add(row + col)
+            backward_.add(row - col)
 
-            board[row] = [row, c]
+            board[row] = [row, col]
             backtrack(row + 1)
 
-            col.remove(c)
-            pos.remove(row + c)
-            neg.remove(row - c)
+            column.remove(col)
+            forward.remove(row + col)
+            backward_.remove(row - col)
             board[row] = []
     backtrack(0)
 
-    return res
+    return table
 
 
 if __name__ == "__main__":
-    boards = solveNQueens(arg)
+    boards = setup_n_queens(arg)
     for board in boards:
         print(board)
