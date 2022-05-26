@@ -27,3 +27,4 @@ ericob@ubuntu:~/0x08-N-Queens$ ./0-nqueens.py 6
 [[0, 4], [1, 2], [2, 0], [3, 5], [4, 3], [5, 1]]
 ericob@ubuntu:~/0x08-N-Queens$ 
 ```
+Algorithm used: [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
