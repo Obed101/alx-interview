@@ -2,20 +2,24 @@
 """This program solves the N-QUEENS problem"""
 import sys
 
+from click import echo
+
 if len(sys.argv) < 2:
-    print("Usage: nqueens N")
+    print("Usage: nqueens N", end='')
     sys.exit(1)
 
 arg = sys.argv[1]
 
-if type(arg) is not int:
-    print("N must be a number")
+try:
+    int(arg)
+except ValueError:
+    print("N must be a number", end='')
     sys.exit(1)
 
-if not (arg >= 4):
-    print("N must be at least 4")
+if not (int(arg) >= 4):
+    print("N must be at least 4", end='')
     sys.exit(1)
-
+arg = int(arg)
 
 def solveNQueens(n):
     """Solution for n queens"""
@@ -54,7 +58,7 @@ def solveNQueens(n):
     return res
 
 
-# if __name__ == "__main__":
-#     boards = solveNQueens(arg)
-#     for board in boards:
-#         print(board)
+if __name__ == "__main__":
+    boards = solveNQueens(arg)
+    for board in boards:
+        print(board)
