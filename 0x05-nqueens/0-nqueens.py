@@ -54,7 +54,7 @@ def solveNQueens(n):
     return res
 
 
-if __name__ == "__main__":
-    boards = solveNQueens(arg)
-    for board in boards:
-        print(board)
+# if __name__ == "__main__":
+#     boards = solveNQueens(arg)
+#     for board in boards:
+#         print(board)
