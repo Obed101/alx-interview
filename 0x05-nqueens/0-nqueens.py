@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """This program solves the N-QUEENS problem"""
 import sys
 
