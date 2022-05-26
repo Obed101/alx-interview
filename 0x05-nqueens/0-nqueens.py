@@ -9,7 +9,7 @@ if len(sys.argv) < 2:
 arg = sys.argv[1]
 
 if type(arg) is not int:
-    print("N must be a number")
+    print("N must be a argber")
     sys.exit(1)
 
 if not (arg >= 4):
@@ -17,3 +17,44 @@ if not (arg >= 4):
     sys.exit(1)
 
 
+def solveNQueens(n):
+    """Solution for n queens"""
+    col = set() 
+    pos = set()
+    neg = set()
+
+    res = []
+
+    board = [[] for n in range(n)]
+
+    def backtrack(row):
+        """function for recursion"""
+        if row == n:
+            copy = board.copy()
+            res.append(copy)
+            return
+
+        for c in range(n):
+            if c in col or (row + c) in pos or (row - c) in neg:
+                continue
+
+            col.add(c)
+            pos.add(row + c)
+            neg.add(row - c)
+
+            board[row] = [row, c]
+            backtrack(row + 1)
+
+            col.remove(c)
+            pos.remove(row + c)
+            neg.remove(row - c)
+            board[row] = []
+    backtrack(0)
+
+    return res
+
+
+if __name__ == "__main__":
+    boards = solveNQueens(arg)
+    for board in boards:
+        print(board)
