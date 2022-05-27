@@ -24,6 +24,6 @@ request(url, async function (error, _, body) {
   const actors = await Promise.all(charList);
   // finally printing the character names
   for (const actor of actors) {
-    console.log(actor)
+    console.log(actor);
   }
 });
