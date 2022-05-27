@@ -1,22 +1,30 @@
 #!/usr/bin/node
-const request = require('request');
-movie_id = process.argv[2];
+// Takes movie Id as argument and returns 
+// returns all character's names to the console
+// in specific order
 
+const request = require('request');
+const movie_id = process.argv[2];
 const char_list = [];
 const url = `https://swapi-api.hbtn.io/api/films/${movie_id}`;
-request(url, (error, response, body) => {
-  if (error) return console.log('Cannot connect');
-  if (response.statusCode === 200) {
-    body = JSON.parse(body);
-    for (chars of body.characters) {
-      item = function () {
-        request(chars, (error, _, res) => {
-          if (error) return console.log('Cannot get actors name');
-          actor =  JSON.parse(res).name;
-          console.log(actor)
-        });
-      };
-      char_list.push(item());
-    }
+
+request(url, async function(error, _, body) {
+  if (error) return `Unable to connect`;
+  body = JSON.parse(body);
+
+  for (chars of body.characters) {
+
+    item = new Promise(function (resolve) {
+      request(chars, (error, _, res) => {
+        if (error) return `Cannot get Actor's name`;
+        resolve(JSON.parse(res).name);
+      });
+    });
+    char_list.push(item);
+  }
+  const actors = await Promise.all(char_list);
+  // finally printing the character names
+  for (const actor of actors) {
+    console.log(actor);
   }
 });
