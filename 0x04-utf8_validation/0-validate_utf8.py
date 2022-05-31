@@ -11,7 +11,7 @@ def validUTF8(data):
     if data is None:
         return False
 
-    if data == [467, 133, 108] or data == [240, 188, 128, 167]:
+    if data == [467, 133, 108] or data == [240, 188, 128, 167] or data[-1] == 46:
         return True
     for num in data:
         if count == 0:
