@@ -7,7 +7,6 @@ from typing import List
 
 
 def validUTF8(data: List[int]) -> bool:
-    """Validates utf8"""
     num_bytes = 0
 
     for byte in data:
