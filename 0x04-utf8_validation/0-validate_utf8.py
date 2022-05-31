@@ -4,8 +4,10 @@
 This module validates UTF8 data
 """
 
+from typing import List
 
-def validUTF8(data):
+
+def validUTF8(data: List[int]) -> bool:
     byte_count = 0
 
     for i in data:
