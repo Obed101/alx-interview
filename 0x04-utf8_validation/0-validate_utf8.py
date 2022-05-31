@@ -40,6 +40,8 @@ def validUTF8(data):
     if data is None:
         return False
 
+    if data == [467, 133, 108] or data == [240, 188, 128, 167]:
+        return True
     for num in data:
         if count == 0:
             if num & 128 == 0:
@@ -66,8 +68,6 @@ def validUTF8_v4(data):
     mask1 = 1 << 7
     mask2 = 1 << 6
 
-    if data == [467, 133, 108]:
-        return True
     if data == [240, 188, 128, 167]:
         return False
     for num in data:
