@@ -1,24 +1,27 @@
 #!/usr/bin/python3
 """
-This module checks the minimum amount of change required
+Module 0-making_change
 """
 
 
 def makeChange(coins, total):
     """
-    Checks and returns the valid change required
+    Given a pile of coins of different values,
+    determine the fewest number of coins needed
+    to meet a given amount total.
+    Dyanimc Programmming Bottom Up Solution
     """
-    if total == 0:
+    if total <= 0:
         return 0
 
-    coin_split: list = [total + 1] * (total + 1)
-    coin_split[0] = 0
+    dp = [total + 1] * (total + 1)
+    # set minimum number of coins for amount 0
+    dp[0] = 0
 
-    for amount in range(total + 1):
+    # start from 1 because we know dp[0]
+    for amount in range(1, total + 1):
+        # test for every coin
         for coin in coins:
             if amount - coin >= 0:
-                coin_split[amount] = min(
-                    coin_split[amount], coin_split[amount - coin] + 1)
-    if coin_split[total] == total + 1:
-        return -1
-    return coin_split[total]
+                dp[amount] = min(dp[amount], 1 + dp[amount - coin])
+    return dp[total] if dp[total] != total + 1 else -1
