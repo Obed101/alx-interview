@@ -1,9 +1,13 @@
-#!/usr/bin/env python3
-"""This module checks the minimum amount of change required"""
+#!/usr/bin/python3
+"""
+This module checks the minimum amount of change required
+"""
 
 
 def makeChange(coins, total):
-    """Checks and returns the valid change required"""
+    """
+    Checks and returns the valid change required
+    """
     if total == 0:
         return 0
 
