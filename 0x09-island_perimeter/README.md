@@ -1,5 +1,5 @@
 # ISLAND PERIMETER - PYTHON
-Calculating the perimiter of an island in a an ocean using python.
+Calculating the perimeter of an island in a an ocean using python.
 
 
 ## PROBLEM
@@ -26,7 +26,7 @@ water.
 - If the top, right, left or bottom is `0`, then that part is water.
 - If it is `1`, it is land.
 
-## Testing
+### Testing
 You can test with the following example
 ```
 
