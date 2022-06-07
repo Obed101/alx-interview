@@ -6,6 +6,7 @@ calculating the island perimeter in an ocean
 
 
 def island_perimeter(grid):
+    """Island perimeter finder"""
     perimeter = 0
     row = len(grid)
     col = len(grid[0])
