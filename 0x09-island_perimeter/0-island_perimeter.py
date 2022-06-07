@@ -4,11 +4,8 @@ This module contains code for
 calculating the island perimeter in an ocean
 """
 
-from typing import List
 
-
-def island_perimeter(grid: List[List[int]]) -> int:
-    """returns the island defined by Grid"""
+def island_perimeter(grid):
     perimeter = 0
     row = len(grid)
     col = len(grid[0])
