@@ -18,12 +18,12 @@ grid is rectangular, with its width and height not exceeding 100
 connected to the water surrounding the island).
 
 
-## HOW TO WORK IT OUT
+## HOW I WORK IT OUT
 - For every box, check if the left, right, top and bottom nodes are
 water.
 - If true, increment the perimeter by one.
 - Else, continue
-- If the top, right left or bottom is `0`, then that part is water.
+- If the top, right, left or bottom is `0`, then that part is water.
 - If it is `1`, it is land.
 
 ## Testing
@@ -38,7 +38,7 @@ grid = [
     [0, 0, 0, 0, 0, 0]
 ]
 print(island_perimeter(grid))
-## This should display twelve
+## This should display 12
 ## Every figure represent one node
 
 ```
