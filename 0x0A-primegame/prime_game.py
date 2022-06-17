@@ -61,6 +61,6 @@ def isWinner(x: int, nums: list) -> str or None:
     # Getting the winner
     if maria['score'] == ben['score']:
         return None
-    print(maria['score'], 'Maria')
-    print(ben['score'], 'Ben')
+    print('Maria Final score', maria['score'])
+    print('Ben final score', ben['score'])
     return 'Maria' if maria['score'] > ben['score'] else 'Ben'
