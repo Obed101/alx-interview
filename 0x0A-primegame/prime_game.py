@@ -64,3 +64,8 @@ def isWinner(x: int, nums: list) -> str or None:
     print('Maria Final score', maria['score'])
     print('Ben final score', ben['score'])
     return 'Maria' if maria['score'] > ben['score'] else 'Ben'
+
+
+## Testing the function
+if __name__ == '__main__':
+    print(isWinner(3, [3, 5, 1])) # Ben
