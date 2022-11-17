@@ -21,12 +21,10 @@ def minOperations(n: int) -> int:
     return sum(operation_list)
 
 
-## Driver code ##
+#  Driver code #
 
 #  n = 4
 #  print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
 #  n = 12
 #  print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-
-
